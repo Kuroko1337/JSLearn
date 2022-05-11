@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.qwe{
+    background-color: blue;
+    color: white;
+}
+
+
+/* slider */
+.slider{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+    overflow: hidden;
+    background: grey;
+    display: flex;
+    position: relative;
+    height: 800px;
+}
+.item img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+.item{
+    display: none;
+
+}
+.focus{
+    display: block;
+}
+.zag{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+}
+.item h1{
+    font-size: 40px;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+}
+.slider a{
+    position: absolute;
+    bottom: 45%;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    font-size: 40px;
+    padding: 20px;
+    cursor: pointer;
+}
+.slider a:nth-of-type(2){
+    right: 0;
+}

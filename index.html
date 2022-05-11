@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
     <title>JSLearn</title>
 </head>
 <body>
     <button id="button">Отправить</button>
     <button>Отправить</button>
+
+    <!-- Слайдер -->
+    <div class="slider">
+        <div class="item focus">
+            <img src="assets/img/img_1.webp" alt="">
+            <div class="zag"><h1>Заголовок слайда</h1></div>
+        </div>
+        <div class="item">
+            <img src="assets/img/img_2.webp" alt="">
+            <div class="zag"><h1>Заголовок слайда 2</h1></div>
+        </div>
+
+        <!-- Кнопочки -->
+        <a class="prev" onclick="prevSlide()">&#10094;</a>
+        <a class="next" onclick="nextSlide()">&#10095;</a>
+    </div>
 
     <script src="assets/js/main.js"></script>
 </body>

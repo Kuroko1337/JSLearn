@@ -8,7 +8,7 @@
 // // Предупреждение в консоле
 // console.warn("Предупреждение");
 
-privet();
+
 
 
 // Переменные
@@ -20,19 +20,51 @@ privet();
 // const text = "some text";
 // console.log(`${text} ${sum}`);
 // const button = document.querySelector('#button'); // Поиск элемента
-const button = document.getElementById('button'); // Поиск по id
-const buttons = document.querySelectorAll('button');
+// const button = document.getElementById('button'); // Поиск по id
+// const buttons = document.querySelectorAll('button');
+// console.log(buttons);
 
 
 
-for(const button of buttons){
-    button.addEventListener('click', function() {
-        alert("Клик");
-    });
+// for(const button of buttons){
+//     button.addEventListener('click', function() {
+//         button.classList.toggle("qwe");
+//     });
+// }
+
+
+// Слайдер
+let SlideNum = 0;
+
+const slideItem = document.getElementsByClassName('item');
+console.log(slideItem);
+
+showSlide(SlideNum);
+
+function prevSlide(){
+    SlideNum -= 1;
+    showSlide(SlideNum,SlideNum+1);
 }
 
-console.log(buttons);
+function nextSlide(){
+    SlideNum += 1;
+    showSlide(SlideNum, SlideNum-1);
+}
 
-const privet = () => {
-    alert('Привет мир!');
+
+
+function showSlide(n,prev){
+    console.log(n);
+    console.log(slideItem[n]);
+    slideItem[n].classList.add("focus");
+    slideItem[prev].classList.remove("focus");
+
+    if(n>slideItem.length){
+        SlideNum = 0;
+        console.log(SlideNum);
+    }
+    if(n<0){
+        SlideNum = slideItem.length;
+        console.log(SlideNum);
+    }
 }
